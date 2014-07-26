@@ -9,11 +9,11 @@
         src: 'mc.js',
 
         defaultSkin: 'css/mcplayer.css',
-        
+
         cacheBust: Math.round(1 + ((999999999999 - 1) * Math.random())),
 
         html: '<iframe width="100%" height="350" class="mc-player" marginheight="0"' +
-                'marginwidth="0" frameborder="no" scrolling="no" ALLOWTRANSPARENCY="true">' + 
+                'marginwidth="0" frameborder="no" scrolling="no" ALLOWTRANSPARENCY="true">' +
               '</iframe>',
 
         init: function(options) {
@@ -98,8 +98,8 @@
                 el = win.document.createElement(type),
                 baseURI = '';
 
-            // TODO: Use "&" if querystring already exists.
-            src = src + '?cacheBust=' + frame.cacheBust;
+            // create or add-on to querystring
+            src = src + (src.indexOf('?') == -1 ? '?' : '&') + 'cacheBust=' + frame.cacheBust;
 
             if (callback) {
                 el.onload = function() {
@@ -159,7 +159,7 @@
                 frame.loadAsset('https://apis.google.com/js/plusone.js');
             });
 
-        }); 
+        });
         frame.loadAsset(frame.getSkinUrl());
     };
 
