@@ -119,36 +119,36 @@
                                 '<div class="{classPrefix}icon-pause">&#xf0da;</div>' +
                                 '<div class="{classPrefix}play-marker"></div>' +
                             '</div>' +
-                        '</div>' + 
+                        '</div>' +
                         '<div class="{classPrefix}panel" id="{panelId}">' +
                             '<div class="{classPrefix}panel-bg"></div>' +
                             '<div class="{classPrefix}heading">' +
-                                '<h1 class="{classPrefix}title" id="{titleId}">{title}</h1>' + 
-                                '<cite class="{classPrefix}artist" id="{artistId}">{artist}</cite>' + 
-                            '</div>' + 
+                                '<h1 class="{classPrefix}title" id="{titleId}">{title}</h1>' +
+                                '<cite class="{classPrefix}artist" id="{artistId}">{artist}</cite>' +
+                            '</div>' +
                             '<div class="{classPrefix}panel-footer">' +
                                 '<span class="{classPrefix}current" id="{currentId}">00:00</span>' +
                                 '<div class="{classPrefix}scrubber">' +
                                     '<span class="{classPrefix}seek" id="{seekId}"></span>' +
                                     '<span class="{classPrefix}progress" id="{progressId}"></span>' +
-                                '</div>' + 
-                            '</div>' + 
-                        '</div>' + 
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
                         '<div class="{classPrefix}footer">' +
                             '<div class="{classPrefix}duration" id="{durationId}"></div>' +
                             '<div class="{classPrefix}buttons">' +
                                 '<a class="{classPrefix}share {classPrefix}button" id="{shareId}" title="Share"><span>&#xf045;</span></a>' +
                                 '<a href="{infoUrl}" onclick="window.parent.location.href=this.href" class="{classPrefix}logo {classPrefix}button" id="{logoId}" title="mixcrate.com"><span></span></a>' +
-                            '</div>' + 
-                        '</div>' + 
+                            '</div>' +
+                        '</div>' +
                         '<div class="{classPrefix}share-panel">' +
                             '<h1>Share</h1>' +
-                            '<em id="{shareCloseId}" class="{classPrefix}share-close">CLOSE <span class="{classPrefix}icon-close">&#xf00d;</span></em>' +
+                            '<em id="{shareCloseId}" class="{classPrefix}share-close" title="Close share panel">CLOSE <span class="{classPrefix}icon-close">&#xf00d;</span></em>' +
                             '<h2>EMBED CODE</h2>' +
                             '<textarea cols="30" rows="3"><script src="' + EMBED_URL +
                                 '" id="mc-{mixId}"></script></textarea>' +
                             '<h2>SHARE LINKS</h2>' +
-                            '<div class="{classPrefix}share-link"><iframe src="//www.facebook.com/plugins/like.php?href={infoUrl}&amp;width=120&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe></div>' +
+                            '<div class="{classPrefix}share-link"><iframe src="https://www.facebook.com/plugins/like.php?href={infoUrl}&amp;width=120&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe></div>' +
                             '<div class="{classPrefix}share-link"><a href="https://twitter.com/share" class="twitter-share-button" data-text="I\'m listening to {title} by {artist} on Mixcrate" data-url="{infoUrl}" data-via="mixcrate" data-lang="en">Tweet</a></div>' +
                             '<div class="{classPrefix}share-link"><g:plusone size="medium"></g:plusone></div>' +
                         '</div>' +
@@ -251,13 +251,13 @@
         addClass: function(node, className) {
             if (!this.hasClass(node, className)) { // skip if already present
                 node.className = [node.className, className].join(' ');
-            }   
+            }
         },
 
         hasClass: function(node, className) {
             var re =new RegExp('(?:^|\\s+)' + className + '(?:\\s+|$)');
             return re.test(node.className);
-        },  
+        },
 
         removeClass: function(node, className) {
             if (className && this.hasClass(node, className)) {
@@ -266,9 +266,9 @@
 
                 if (this.hasClass(node, className)) {
                     this.removeClass(node, className);
-                }   
-            }   
-        }, 
+                }
+            }
+        },
 
         play: function() {
             var node = this._player;
@@ -345,7 +345,7 @@
         },
 
         _whileLoading: function() {
-            var sound = this._soundBridge, 
+            var sound = this._soundBridge,
                 width = sound.bytesLoaded / sound.bytesTotal * 100;
 
             this._progress.style.width =  width + '%';
