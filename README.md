@@ -2,9 +2,7 @@
 
 The embeddable player was built to embed Mixcrate hosted audio files.
 
-For more information on Mixcrate, please visit http://mixcrate.com.
-
-Usage:
+##Usage:
 
 ```
 <!doctype html>
@@ -39,6 +37,10 @@ code {
 
 *WHERE **id** is the unique audio file identifier*
 
+##Contribute
+Find a bug or want a new feature? You are welcome to fork and make a pull-request. When submitting a pull-request, please follow the same styling/formatting and use git flow to merge into *develop* branch. Thank you for the help.
+
 ## Resources
+* [Mixcrate](http://mixcrate.com)
 * [SoundManager2](http://www.schillmania.com/projects/soundmanager2/)
 * [YQL](https://developer.yahoo.com/yql/)
