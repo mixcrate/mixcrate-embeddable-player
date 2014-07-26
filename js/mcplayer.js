@@ -143,7 +143,7 @@
                         '</div>' +
                         '<div class="{classPrefix}share-panel">' +
                             '<h1>Share</h1>' +
-                            '<em id="{shareCloseId}" class="{classPrefix}share-close">CLOSE <span class="{classPrefix}icon-close">&#xf00d;</span></em>' +
+                            '<em id="{shareCloseId}" class="{classPrefix}share-close" title="Close share panel">CLOSE <span class="{classPrefix}icon-close">&#xf00d;</span></em>' +
                             '<h2>EMBED CODE</h2>' +
                             '<textarea cols="30" rows="3"><script src="' + EMBED_URL +
                                 '" id="mc-{mixId}"></script></textarea>' +
