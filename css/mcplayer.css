@@ -56,7 +56,6 @@ a {
     -webkit-transition: -webkit-transform 300ms;
     -moz-transition: -moz-transform 300ms;
     -ms-transition: -ms-transform 300ms;
-    -o-transition: -o-transform 300ms;
 }
 
 .mc-panel-bg {
@@ -71,14 +70,14 @@ a {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
+    transform: translateY(0);
 }
 
 .mc-pause .mc-panel {
     -webkit-transform: translateY(72%);
     -moz-transform: translateY(72%);
     -ms-transform: translateY(72%);
-    -o-transform: translateY(72%);
+    transform: translateY(72%);
 }
 
 .mc-player h1,
@@ -238,10 +237,10 @@ a {
     -ms-animation-duration: 2.2s;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
-    -o-animation-name: spin;
-    -o-animation-duration: 2.2s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     cursor: pointer;
     height: 100%;
     width: 100%;
@@ -293,7 +292,6 @@ a {
     -webkit-transform: scaleY(0);
     -moz-transform: scaleY(0);
     -ms-transform: scaleY(0);
-    -o-transform: scaleY(0);
     transform: scaleY(0);
 }
 
@@ -324,6 +322,7 @@ a {
     cursor: default;
     font-size: 11px;
     position: relative;
+    pointer-events: none;
     z-index: 1;
 }
 
@@ -410,19 +409,18 @@ a {
     -webkit-transition: -webkit-transform 300ms;
     -moz-transition: -moz-transform 300ms;
     -ms-transition: -ms-transform 300ms;
-    -o-transition: -o-transform 300ms;
 
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .mc-sharing .mc-share-panel {
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 @-moz-keyframes spin {
@@ -434,6 +432,7 @@ a {
 @-webkit-keyframes spin {
     to {
         -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -443,29 +442,27 @@ a {
     }
 }
 
-@-o-keyframes spin {
-    to {
-        -o-transform: rotate(360deg);
-    }
-}
-
 @-webkit-keyframes grow {
     from {
         -webkit-transform: scaleY(0);
+        transform: scaleY(0);
     }
 
     to {
         -webkit-transform: scaleY(1);
+        transform: scaleY(1);
     }
 }
 
 @-webkit-keyframes shrink {
     from {
         -webkit-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
     }
 
     to {
-        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        transform: scaleY(0);
     }
 }
 
@@ -506,26 +503,6 @@ a {
 
     to {
         -ms-transform: scaleY(0);
-    }
-}
-
-@-o-keyframes grow {
-    from {
-        -o-transform: scaleY(0);
-    }
-
-    to {
-        -o-transform: scaleY(1);
-    }
-}
-
-@-o-keyframes shrink {
-    from {
-        -o-transform: scaleY(1);
-    }
-
-    to {
-        -o-transform: scaleY(0);
     }
 }
 
